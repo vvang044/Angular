@@ -1,0 +1,40 @@
+<!--Assignment-->
+<!--1. Add input field which updates a property {username} via two-way-binding-->
+<!--2. Output username property via string interpolation ( in a prograph below the input )-->
+<!--3. Upon clicking the button, the username should be reset to an empty string-->
+
+
+<h3>Basic Assingment My Solution</h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <!--now you have username now bind this property name to type script file
+      go to component.ts under export create username-->
+      <!--1. for two-way binding you need to create [(ngModel)]-->
+      <!--in order for this to show up you need to add the import FormsModule '@angular/forms'-->
+      <!--inside the ngModule in the import array add FormsModule-->
+      <label for="userinfo">Username</label>
+      <input type="text"
+      class="form-control"
+      [(ngModel)]="username">
+      <hr>
+
+      <!--2.to update the input the with every key stroke add a p tag and interpolate-->
+      <p>{{username}}</p>
+      
+      
+      <br>
+      <!--3. add a button -->
+      <button 
+      class="btn btn-primary" 
+      
+      [disabled]="username==='' "
+      
+      (click)="username =''">RESET USER</button>
+     <!-- disable if the username is empty  -->
+     <!-- reset it back to empty strick on click. so create a click event -->
+    <!-- and that click event should be equal to an empty string -->
+    </div>
+  </div>
+</div>

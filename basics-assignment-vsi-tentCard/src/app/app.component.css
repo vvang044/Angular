@@ -1,0 +1,14 @@
+
+
+.main-wrapper{
+    height: 550px;
+    width: 700px;
+    background-color: #012169;
+    margin: 40px 200px;
+    align-items: center;
+    position: absolute;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+
+}

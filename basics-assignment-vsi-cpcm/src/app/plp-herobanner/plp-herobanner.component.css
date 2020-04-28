@@ -1,0 +1,11 @@
+#herobanner{
+    height:  150px;
+    width:  430px;
+    border: 2px dotted black;
+    margin: 30px;
+}
+
+#herobutton{
+    float: right;
+    margin-top: 34px;
+}

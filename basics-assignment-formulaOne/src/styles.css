@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px; 
+    height:auto;
+    width: auto;
+    color: white;
+    background-color: #2196F3;
+    background-image: url("https://www.mercedesamgf1.com/en/wallpaper/_jcr_content/root/thumbnailgallery_0/parsys/thumbnailgalleryitem_9/image/MQ6-0-image-20191104165343/mf1_190924_sing_wallpapers_desktop_2.jpeg");
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,19 @@
+.outerborder{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border: 25px solid red;
+    border-radius: 10%;
+    transform: skew(-20deg);
+}
+
+.row{
+    overflow: hidden;
+    height: 47px;
+    width: 55px;
+    transform: skew(-23deg);
+}
+
+span{
+    color: white;
+}

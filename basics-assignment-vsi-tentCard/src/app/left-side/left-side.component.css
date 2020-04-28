@@ -1,0 +1,16 @@
+.leftside{
+ text-align: center;
+ margin: 5px 0px;
+
+}
+
+.btn{
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.btn:focus{
+    border:none;
+    outline:none;
+}

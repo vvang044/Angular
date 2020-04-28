@@ -1,0 +1,27 @@
+.driver-container{
+    width: 400px;
+    max-width: 100%;
+    margin: 0 25px 25px 0;
+    background-color: chocolate;
+    vertical-align: top;
+}
+
+.list{
+    border: 2px solid red;
+    min-height: 60px;
+    background: white;
+    color: blue;
+    border-radius: 4px;
+}
+
+.driverSeat{
+    padding:20px 10px;
+    border-bottom: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    background-color: darkcyan;
+    font-size: 14px;
+}

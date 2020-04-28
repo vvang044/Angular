@@ -1,0 +1,32 @@
+<h2>Basic assignment 3</h2>
+<h4>1.Add A Button which says "Display Details</h4>
+<h4>2.Add a paragraph with any content of your choice(e.g., "Secret Password=tuna")</h4>
+<h4>3.Toggle the displaying of that paragraph with the button created in the first step</h4>
+<h4>4.Log all button clicks in an array and output that array below the secret paragraph ( maybe log a timestamp or simply an incrementing number)</h4>
+<h4>5.Starting at the 5th log item, give all future log items a blue background ( via ngStyle) and white color</h4>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- 3.add click listner through event biding -->
+      <!-- 3.in the app component create property and set it to false -->
+      <!-- 1.add button -->
+      <!-- <button class="btn btn-primary" (click)="showSecret = !showSecret">Display Details</button>--><br>
+      <hr>
+      <!-- 4. log all click in an array -->
+      <button class="btn btn-primary" 
+      (click)="onToggleDetails()">
+       Display Details</button>
+      <!-- create ngif and call that property -->
+      <p *ngIf="showSecret">
+        Secret Password = tuna
+      </p>
+      <!-- 2. create a p tag with text secret password=tuna -->
+      <div 
+      *ngFor="let logItem of log"
+      [ngStyle]="{backgroundColor: logItem>=5 ? 'blue' : 'transparent'}"
+      [ngClass]="{'white-text': logItem>=5}"> {{ logItem }}</div>
+    </div>
+  </div>
+</div>
+

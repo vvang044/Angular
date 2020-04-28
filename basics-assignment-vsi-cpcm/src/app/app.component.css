@@ -1,0 +1,12 @@
+#box{
+    height: 250px;
+    width: 160px;
+    border: 2px dotted black;
+    margin:20px;
+}
+
+#product{
+   text-align: center;
+   margin: 20px;
+   color: blue;
+}

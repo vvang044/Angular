@@ -1,0 +1,10 @@
+#council{
+     width: 100%;
+        height: 350px;
+        background:#D6A2E8;
+        align-items: center;
+        text-align: center;
+        margin: 30px 3px 0px 1px;
+        border-radius: 25px;
+        padding-top: 10px;
+}

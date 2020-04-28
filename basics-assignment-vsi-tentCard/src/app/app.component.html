@@ -1,0 +1,20 @@
+
+
+
+<div class="container">
+  <div class="main-wrapper">
+  
+
+    <app-left-side (featureSelected)="onNavigate($event)"></app-left-side>
+
+
+  <app-nutritionists
+  *ngIf="loadedFeature === 'nutritionist'"></app-nutritionists>
+
+
+
+  <app-wellnesscouncil
+  *ngIf="loadedFeature !== 'nutritionist'"></app-wellnesscouncil> 
+
+  </div>
+</div>

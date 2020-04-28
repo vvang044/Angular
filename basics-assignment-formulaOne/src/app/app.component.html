@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <p class="location">CANADIAN GRAND PRIX 2020</p>
+      <p class="timertext">DAYS | HOURS | MINS | SEC</p>
+
+      <countdown-timer class="timer"
+      [end]="'2020-04-1 00:00:00'">
+     </countdown-timer>
+
+     
+    </div><!--forcolmd4-->
+
+    <div class="col-md-5"></div>
+
+    <div class="col-md-3 drivers-container">
+          <h4> <img src="https://cdn.pixabay.com/photo/2016/06/21/12/51/flag-1471038_1280.png"> CHAMPIONSHIP POSITIONS </h4>
+          <p class="driverposition"> DRIVER | CAR | POINTS </p>
+          <!-- give name which is cdkDropList, give local reference #firstList and name cdkDropList -->
+          <!-- we need to display the array created or the data so use [cdkDropListData] -->
+          <!-- you need to connect the first array to second array, use cdkDropListConnectedTo -->
+          <!-- in order bind  you need to write event method -->
+          <div 
+          cdkDropList 
+          [cdkDropListData]="drivers"
+          [cdkDropListConnectedTo]="[secondList]"
+          #firstList="cdkDropList"
+          (cdkDropListDropped)="drop($event)"
+          class="drivers-list"
+          >
+          
+          <!-- ngFor loop for the first set of array, "cdkDrag" is added to div to drag items -->
+          <div *ngFor="let driver of drivers" class="drivers" cdkDrag>
+              {{driver.name}}  <span class="model">{{driver.car}}</span>  * {{driver.points}}
+              <img *cdkDragPreview [src]="driver.poster" [alt]="driver.name" id="poster">
+          </div><!--forngFor-->
+        </div><!--forcdkDropList-->
+    </div><!--colmd3-->
+
+
+  </div><!--forrow-->
+</div><!--forcontainer-->
+
+
+<div class="container-fluid">
+  <div class="poleposition-wrapper">
+    <h4>POLE POSITIONS </h4>
+
+    <div 
+          cdkDropList
+          [cdkDropListData]="altDrivers"
+          [cdkDropListConnectedTo]="firstList" 
+          #secondList="cdkDropList"
+          (cdkDropListDropped)="drop($event)"
+          class="drivers-list">
+
+        <div *ngFor="let driver of altDrivers" class="drivers" cdkDrag>
+          {{driver.name}} <span class="model">{{driver.car}}</span> * {{driver.points}}
+          <img *cdkDragPreview [src]="driver.poster" [alt]="driver.name" id="poster">
+        </div><!--ngforloop-->
+  </div><!--cdkDropList-->
+  </div><!--championswrapper-->
+</div><!--forcontainer-->

@@ -1,0 +1,91 @@
+
+<div class="example-container">
+  <h2>To do</h2>
+
+  <div
+    cdkDropList
+    #todoList="cdkDropList"
+    [cdkDropListData]="topFiveDrivers"
+    [cdkDropListConnectedTo]="[doneList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let driver of topFiveDrivers" cdkDrag>
+      {{driver.name}} - <span class="model"> {{driver.car}}  </span>| ** {{driver.points}} **
+      <img *cdkDragPreview [src]="driver.poster" [alt]="driver.name">
+    </div>
+  </div>
+</div>
+
+<div class="example-container">
+  <h2>Done</h2>
+
+  <div
+    cdkDropList
+    #doneList="cdkDropList"
+    [cdkDropListData]="bottomFiveDrivers"
+    [cdkDropListConnectedTo]="[todoList]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let driver of bottomFiveDrivers" cdkDrag>
+      {{driver.name}} - <span class="model"> {{driver.car}}  </span>| ** {{driver.points}} **
+      <img *cdkDragPreview [src]="driver.poster" [alt]="driver.name">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h4>VERSION TWO OF DRAG AND DROP</h4>
+
+<div class="driver-container">
+  <h4>CHAMPIONSHIP DRIVERS</h4> -->
+  <!-- 
+  <div class="list"
+     >
+
+  <div class="driverSeat"
+   *ngFor="let driver of topFiveDrivers" cdkDrag>
+    {{driver.name}} - <span> {{driver.car}}  </span>| ** {{driver.points}} **
+  </div>
+  </div>
+</div>
+
+
+<div class="driver-container">
+  <h4>POLE POSITIONS</h4>
+
+  <div 
+  
+   class="list">
+
+   <div class="driverSeat" 
+   *ngFor="let driver of bottomFiveDrivers" cdkDrag>
+    {{driver.name}} - <span> {{driver.car}}  </span>| ** {{driver.points}} **
+   </div>
+    
+  </div>
+</div> -->

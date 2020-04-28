@@ -1,0 +1,15 @@
+<div
+        class="panel panel-default"
+        >
+         <div class="panel-heading">{{ element.name }}</div> 
+        <!-- <div class="panel-heading">{{ name }}</div> -->
+        <div class="panel-body">
+          <!-- <p> 
+            <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
+            <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
+          </p> -->
+<!-- got moved to app.component.html -->
+          <ng-content></ng-content>
+        </div>
+      </div>
+<!--*ngFor="let element of serverElements" << was taken from the div class  -->
